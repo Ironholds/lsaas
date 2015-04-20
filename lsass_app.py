@@ -23,13 +23,13 @@ So I wrote a realistic open API, Lip Service As A Service. You're welcome.
 
 Use
 -------
-LSAAS provides two sorts of data, both provided as JSON. They are *papers* (academic publications)
+LSAAS has two sorts of information, both provided as JSON. They are *papers* (academic publications)
 and *data* (open datasets). Of course, this is actually a realistic API, so neither is genuinely provided.
 That was just to get you in the door.
 
 *Papers* can be accessed by pointing a GET request at <code>http:/ironholds.org/lsaas/papers/</code>. Leaving the URL at that will just
 give you a randomly-selected item from our array of only-mostly-a-joke server responses, which contain an ID number,
-a name and a result. If you point the request at <code>/lsaas/papers/id_number</code> you can get a specific item
+a name and a result. If you point the request at <code>http:/ironholds.org/lsaas/papers/id_number</code> you can get a specific item
 rather than a randomly selected one.
 
 *Data* can be accessed by pointing a POST request at <code>http:/ironholds.org/lsaas/data/</code>. We were going to have it use GET requests
@@ -43,7 +43,7 @@ one.
 Contribute
 -------
 The source code [lives on GitHub](https://github.com/Ironholds/lsaas) and is written by, well, [Oliver](http://ironholds.org)
-after a joke that [Scott Chamberlain] made on Twitter spiraled massively, massively out of control. Scope creep is a real thing.
+after a joke that [Scott Chamberlain](https://github.com/sckott) made on Twitter spiraled massively, massively out of control. Scope creep is a real thing.
 If you'd like to submit new error messages or events, submit a pull request!
 
 Render irrelevant
