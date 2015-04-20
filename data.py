@@ -1,5 +1,5 @@
 #Publishing data
-papers = [
+datasets = [
   {
     'id'        : 1,
     'error_code': u'ORACLE NIGHTMARE GREEN',
@@ -40,7 +40,7 @@ papers = [
     'error_code': u'GOD GAME BLACK',
     'result'    : u'Our developers were just random developers, not researchers, and they didn\'t think you\'d need this data, '
                   u'so you don\'t get it.'
-  }
+  },
   {
     'id'        : 9,
     'error_code': u'ANNING BLUE SKULL',
