@@ -35,6 +35,6 @@ papers = [
     'id'    : 7,
     'name'  : u'A textbook from $MAJOR_PUBLISHER.',
     'result': u'You pick up the physical copy on the other campus, or you get a digital copy for $100 that deletes itself after a week. '
-              u'Nobody is quite sure why $MAJOR_PUBLISHER thinks a digital copy on your hard drive reaches a wider audience than a book'
+              u'Nobody is quite sure why $MAJOR_PUBLISHER thinks a digital copy on your hard drive reaches a wider audience than a book '
               u'in a publicly-accessed library, but asking questions is against the licensing terms'
   }]

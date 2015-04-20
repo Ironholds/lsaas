@@ -27,14 +27,14 @@ LSAAS has two sorts of information, both provided as JSON. They are *papers* (ac
 and *data* (open datasets). Of course, this is actually a realistic API, so neither is genuinely provided.
 That was just to get you in the door.
 
-*Papers* can be accessed by pointing a GET request at <code>http:/ironholds.org/lsaas/papers/</code>. Leaving the URL at that will just
-give you a randomly-selected item from our array of only-mostly-a-joke server responses, which contain an ID number,
-a name and a result. If you point the request at <code>http:/ironholds.org/lsaas/papers/id_number</code> you can get a specific item
+*Papers* can be accessed by pointing a GET request at <code>[http://ironholds.org/lsaas/papers/](./papers/)</code>.
+Leaving the URL at that will just give you a randomly-selected item from our array of only-mostly-a-joke server responses, which contain
+an ID number, a name and a result. If you point the request at <code>http://ironholds.org/lsaas/papers/id_number</code> you can get a specific item
 rather than a randomly selected one.
 
-*Data* can be accessed by pointing a POST request at <code>http:/ironholds.org/lsaas/data/</code>. We were going to have it use GET requests
-too but the nice people from Oracle told us that GET requests weren't ISO compliant. Given how much they charged, we're
-pretty sure they know their stuff.
+*Data* can be accessed by pointing a POST request at <code>[http:/ironholds.org/lsaas/data/](./data/)</code>. We were going to have it use
+GET requests too but the nice people from Oracle told us that GET requests weren't ISO compliant. Given how much they charged, they
+*have* to know what they're talking about.
 
 Data requests don't provide data, they provide errors. These take the form of an ID number, a nonsensical error code and
 an error message. As with *papers*, appending an ID number to the URL will get you a specific error instead of a randomly-selected
@@ -59,7 +59,7 @@ a pointless tool:
   return render_template('index.html', **locals())
   
 
-@app.route('/lsaas/data', methods=['POST'])
+@app.route('/lsaas/data/', methods=['POST'])
 def rand_task():
   return jsonify({'dataset': choice(datasets)})
 
