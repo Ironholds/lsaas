@@ -10,8 +10,16 @@ app = Flask(__name__, static_url_path='')
 @app.route('/lsaas/')
 def index():
   index_content = """
-Lip Service As A Service (LSAAS): a realistic open data API
+Lip Service As A Service (LSAAS)
 =======
+
+A realistic open data API
+-------
+Everyone wants open data! We have oh-so-very-many APIs and open data sites, and somewhere between making them
+RESTful and CRUDdy and SOA-based and TLA-full we forgot to make them actually work. Don't even talk to me
+about "open publishing".
+
+So I wrote a realistic open API, Lip Service As A Service. You're welcome.
 
 Use
 -------
@@ -19,12 +27,12 @@ LSAAS provides two sorts of data, both provided as JSON. They are *papers* (acad
 and *data* (open datasets). Of course, this is actually a realistic API, so neither is genuinely provided.
 That was just to get you in the door.
 
-*papers* can be accessed by pointing a GET request at <code>/lsaas/papers/</code>. Leaving the URL at that will just
+*Papers* can be accessed by pointing a GET request at <code>http:/ironholds.org/lsaas/papers/</code>. Leaving the URL at that will just
 give you a randomly-selected item from our array of only-mostly-a-joke server responses, which contain an ID number,
 a name and a result. If you point the request at <code>/lsaas/papers/id_number</code> you can get a specific item
 rather than a randomly selected one.
 
-*Data* can be accessed by pointing a POST request at <code>/lsaas/data/</code>. We were going to have it use GET requests
+*Data* can be accessed by pointing a POST request at <code>http:/ironholds.org/lsaas/data/</code>. We were going to have it use GET requests
 too but the nice people from Oracle told us that GET requests weren't ISO compliant. Given how much they charged, we're
 pretty sure they know their stuff.
 
@@ -45,7 +53,7 @@ a pointless tool:
 
 * Get involved in groups that work on APIs, client- or server-side, like [rOpenSci](https://ropensci.org/)
 * Teach your org to write good APIs. Check out [The Sunlight Foundation](http://sunlightfoundation.com/) for one of my favourites.
-* Learn about and educate people about the importance of open data.
+* Learn about and educate people about [the importance of open data](http://opendatahandbook.org/en/index.html).
 """
   index_content = Markup(markdown.markdown(index_content))
   return render_template('index.html', **locals())
