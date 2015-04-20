@@ -5,7 +5,7 @@ from random import choice
 from data   import *
 from papers import *
 
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__, static_url_path='/lsaas/static/')
 
 @app.route('/lsaas/')
 def index():
