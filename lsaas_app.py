@@ -65,7 +65,7 @@ def rand_task():
 
 @app.route('/lsaas/data/<int:data_id>', methods=['POST'])
 def get_task(data_id):
-  dataset = [dataset for dataset in datasets if datasets['id'] == data_id]
+  dataset = [dataset for dataset in datasets if dataset['id'] == data_id]
   if len(dataset) == 0:
     abort(404)
   return jsonify({'dataset': dataset[0]})
@@ -75,8 +75,8 @@ def rand_paper():
   return jsonify({'paper': choice(papers)})
 
 @app.route('/lsaas/papers/<int:paper_id>', methods=['GET'])
-def get_paper(data_id):
-  paper = [paper for paper in papers if papers['id'] == paper_id]
+def get_paper(paper_id):
+  paper = [paper for paper in papers if paper['id'] == paper_id]
   if len(paper) == 0:
     abort(404)
   return jsonify({'dataset': paper[0]})
